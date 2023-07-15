@@ -1,0 +1,248 @@
+﻿<Window x:Class="Patient_Registration_System.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Patient_Registration_System.View" 
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" 
+        xmlns:viewModel="clr-namespace:Patient_Registration_System.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1300"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewModel:MainWindowVM/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:NHomeWindowVM}">
+            <local:NHomeWindow/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:NRegistrationWindowVM}">
+            <local:NRegistrationWindow/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:NUpdateWindowVM}">
+            <local:NUpdateWindow/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:NDeleteWindowVM}">
+            <local:NDeleteWindow/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:NPayementsWindowVM}">
+            <local:NPayementsWindow/>
+        </DataTemplate>
+    </Window.Resources>
+
+
+
+
+    <Border CornerRadius="20">
+        <Border CornerRadius="20"  BorderThickness="5" >
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                    <GradientStop Color ="DarkBlue" Offset="0"/>
+                    <GradientStop Color ="DarkViolet" Offset="0.75"/>
+                    <GradientStop Color ="Purple" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="97*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border CornerRadius="10 0 0 10" Grid.Column="0" Grid.RowSpan="4">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0 0" EndPoint="1 0.75">
+                            <GradientStop Color ="DarkBlue" Offset="0."/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" 
+                                    Height="120" Margin="15 0 0 40" 
+                                    VerticalAlignment="Top" >
+                            <Image Source="/Patient Registration System;component/Images/image14.jpeg" Height="40" />
+                            <TextBlock Text="Patient Registration System"
+                                       Foreground="White" FontWeight="Normal" 
+                                       FontSize="20" 
+                                       FontFamily="Montserrat" 
+                                       VerticalAlignment="Center" 
+                                       Margin="1 35 0 40" 
+                                       TextWrapping="Wrap" 
+                                       Padding="0 25 0 5"  
+                                       TextAlignment="Center" 
+                                       Width="190" 
+                                       Height="96"/>
+
+                        </StackPanel>
+
+                        <!--Menu Buttons-->
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     x:Name="rbtnNHome"
+                                     Checked="rbtnNHome_Checked">
+                            
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Home" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                       
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     x:Name="rbtnNRegistration"
+                                     Checked="rbtnNRegistration_Checked">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="UserPlus" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Registation" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     x:Name="rbtnNUpdate"
+                                     Checked="rbtnNUpdate_Checked">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Upload" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Update Information" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     x:Name="rbtnNDelete"
+                                     Checked="rbtnNDelete_Checked">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Trash" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Delete Registation" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     x:Name="rbtnNPayements"
+                                     Checked="rbtnNPayements_Checked">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="MoneyCheckDollar" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Payements" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                    </StackPanel>
+
+
+
+
+                </Border>
+
+                <Border CornerRadius="0 10 10 0" Grid.Column="1" Grid.RowSpan="4">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0 0" EndPoint="1 0.75">
+                            <GradientStop Color ="DarkBlue" Offset="0."/>
+                            <GradientStop Color ="Purple" Offset="0.55"/>
+                            <GradientStop Color ="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel x:Name="pnlnControlBar"
+                                    Grid.Row="0"
+                                    Orientation="Horizontal"
+                                    FlowDirection="RightToLeft"
+                                    Background="Transparent"
+                                    MouseLeftButtonDown="pnlnControlBar_MouseLeftButtonDown"
+                                    MouseEnter="pnlnControlBar_MouseEnter">
+
+                            <Button x:Name="btnnClose" 
+                                     Style="{StaticResource controlButton}"
+                                    Click="btnnClose_Click"
+                                    >
+
+                                <fa:IconImage Icon="Xmark" Style="{StaticResource CntrolButtonIcon}"/>
+
+                            </Button>
+
+                            <Button x:Name="btnnMaximize"
+                                   Style="{StaticResource controlButton}"
+                                    Click="btnnMaximize_Click">
+                                <fa:IconImage Icon="WindowMaximize" Style="{StaticResource CntrolButtonIcon}"/>
+
+                            </Button>
+
+                            <Button x:Name="btnnMinimize" 
+                                    Style="{StaticResource controlButton}"
+                                    Click="btnnMinimize_Click"
+                                    
+                                    >
+                                <fa:IconImage Icon="WindowMinimize" Style="{StaticResource CntrolButtonIcon}"/>
+
+                            </Button>
+
+                        </StackPanel>
+
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"
+                                        Orientation="Horizontal"
+                                        VerticalAlignment="Center">
+                                <fa:IconImage Icon="{Binding NIcon}"
+                                              Height="20"
+                                              Width="20"
+                                              Margin="35,0,10,0"
+                                              Foreground="GhostWhite"/>
+                                <TextBlock Text="{Binding NCaption}"
+                                           Foreground="GhostWhite"
+                                           FontSize="16"
+                                           FontFamily="Montserrat"
+                                           FontWeight="Medium"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1"
+                                        Orientation="Horizontal"
+                                        FlowDirection="RightToLeft"
+                                        VerticalAlignment="Center"
+                                        Margin="0,0,10,0">
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <ContentControl x:Name="CCN"
+                                        Grid.Row="2"
+                                        Margin="25"                                    
+                            />
+
+
+
+                    </Grid>
+
+
+
+                </Border>
+
+
+
+            </Grid>
+        </Border>
+    </Border>
+
+</Window>

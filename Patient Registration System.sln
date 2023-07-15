@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33027.239
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient Registration System", "Patient Registration System\Patient Registration System.csproj", "{BEE7CA34-7DFA-4DB5-BCD3-FCF63240D0A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patient Registration System.Tests", "Patient Registration System.Tests\Patient Registration System.Tests.csproj", "{F20A98CD-60B5-4C28-B79A-CFB4B61D7949}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEE7CA34-7DFA-4DB5-BCD3-FCF63240D0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE7CA34-7DFA-4DB5-BCD3-FCF63240D0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE7CA34-7DFA-4DB5-BCD3-FCF63240D0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE7CA34-7DFA-4DB5-BCD3-FCF63240D0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20A98CD-60B5-4C28-B79A-CFB4B61D7949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20A98CD-60B5-4C28-B79A-CFB4B61D7949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20A98CD-60B5-4C28-B79A-CFB4B61D7949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20A98CD-60B5-4C28-B79A-CFB4B61D7949}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0A644AC-8770-4268-954F-4173381C731E}
+	EndGlobalSection
+EndGlobal

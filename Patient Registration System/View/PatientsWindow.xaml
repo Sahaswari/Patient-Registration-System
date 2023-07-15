@@ -1,0 +1,253 @@
+﻿<UserControl x:Class="Patient_Registration_System.View.PatientsWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Patient_Registration_System.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="1000">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                <GradientStop Color ="DarkBlue" Offset="0"/>
+                <GradientStop Color ="DarkViolet" Offset="0.75"/>
+                <GradientStop Color ="Purple" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="240"/>
+                    <ColumnDefinition Width="175"/>
+                    <ColumnDefinition Width="225"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+
+                <TextBlock Text="Patient ID :" Style="{StaticResource pointText}" Grid.Row="1" Grid.Column="0" />
+                <TextBox Name="txtpatientid" 
+                 Grid.Row="1" Grid.Column="1" Style="{StaticResource pointBox}"/>
+
+                <TextBlock Text=" Patient Details ---------------" Grid.Row="2" FontSize="15" Foreground="LightPink" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+                <TextBlock Text="Registation Date :" Style="{StaticResource pointText}" Grid.Row="3" Grid.Column="0" />
+                <DatePicker Name="txtpatientregidate" Width="220"  Background="LightGray" Height="23"
+                 Grid.Row="3" Grid.Column="1" />
+
+
+                <TextBlock Text="First Name :" Style="{StaticResource pointText}" Grid.Row="4" Grid.Column="0" />
+                <TextBox Name="txtpatientfirstname" 
+                 Grid.Row="4" Grid.Column="1" Style="{StaticResource pointBox}"/>
+
+
+                <TextBlock Text="Last Name :" Style="{StaticResource pointText}" Grid.Row="5" Grid.Column="0" />
+                <TextBox Name="txtpatientlastname" 
+                 Grid.Row="5" Grid.Column="1" Style="{StaticResource pointBox}"/>
+
+
+                <TextBlock Text="Gender :" Style="{StaticResource pointText}" Grid.Row="6" Grid.Column="0" />
+                <ComboBox Name="txtpatientgen" 
+                  Margin="10 5 5 0"
+                Width="220"
+                Padding="10 0 0 0"
+                HorizontalAlignment="Left"
+                 Grid.Row="6" Grid.Column="1" Style="{StaticResource comboBox}"
+                 IsEditable="False" IsReadOnly="True" />
+
+
+                <TextBlock Text="Occupation :" Style="{StaticResource pointText}" Grid.Row="7" Grid.Column="0" />
+                <TextBox Name="txtpatientoccupation" 
+                 Grid.Row="7" Grid.Column="1" Style="{StaticResource pointBox}"/>
+
+
+                <TextBlock Text="Date of Birth :" Style="{StaticResource pointText}" Grid.Row="8" Grid.Column="0" />
+                <DatePicker Name="txtpatientbirth"  Width="220"  Background="LightGray" Height="23"
+                 Grid.Row="8" Grid.Column="1" />
+
+
+                <TextBlock Text="Age :" Style="{StaticResource pointText}" Grid.Row="9" Grid.Column="0" />
+                <TextBox Name="txtpatientage" 
+                 Grid.Row="9" Grid.Column="1" Style="{StaticResource pointBox}"/>
+
+
+                <TextBlock Text="Blood Group :" Style="{StaticResource pointText}" Grid.Row="10" Grid.Column="0" />
+                <ComboBox Name="txtpatientblood" 
+                  Margin="10 5 5 0"
+                Width="220"
+                Padding="10 0 0 0"
+                HorizontalAlignment="Left"
+                 Grid.Row="10" Grid.Column="1" Style="{StaticResource comboBox}"
+                 IsEditable="False" IsReadOnly="True"  />
+
+
+                <TextBlock Text="Manital State :" Style="{StaticResource pointText}" Grid.Row="11" Grid.Column="0" />
+                <ComboBox Name="txtpatientmaritalstate" 
+                  Margin="10 5 5 0"
+                Width="220"
+                Padding="10 0 0 0"
+                HorizontalAlignment="Left"
+                 Grid.Row="11" Grid.Column="1" Style="{StaticResource comboBox}"
+                 IsEditable="False" IsReadOnly="True"  />
+
+
+                <!--2nd part of coloumn-->
+                <TextBlock Text=" Contract Details ---------------" Grid.Column="2" FontSize="15" Foreground="LightPink" FontStyle="Italic" Grid.Row="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+                <TextBlock Text="Address :" Style="{StaticResource pointText}" Grid.Row="3" Grid.Column="2" />
+                <TextBox Name="txtpatientaddress" 
+                 Grid.Row="3" Grid.Column="3" Style="{StaticResource pointBox}"/>
+
+                <TextBlock Text="City :" Style="{StaticResource pointText}" Grid.Row="4" Grid.Column="2" />
+                <TextBox Name="txtpatientcity" 
+                 Grid.Row="4" Grid.Column="3" Style="{StaticResource pointBox}"/>
+
+                <TextBlock Text="Contract No :" Style="{StaticResource pointText}" Grid.Row="5" Grid.Column="2" />
+                <TextBox Name="txtpatientcontrctno" 
+                 Grid.Row="5" Grid.Column="3" Style="{StaticResource pointBox}"/>
+
+                <TextBlock Text=" Hospital Details ---------------" Grid.Column="2" Grid.Row="7" FontSize="15" Foreground="LightPink" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+                <TextBlock Text="Department :" Style="{StaticResource pointText}" Grid.Row="8" Grid.Column="2" />
+                <TextBox Name="txtpatientdepartment" 
+                 Grid.Row="8" Grid.Column="3" Style="{StaticResource pointBox}"/>
+
+
+                <TextBlock Text="Doctor Name :" Style="{StaticResource pointText}" Grid.Row="9" Grid.Column="2" />
+                <TextBox Name="txtpatientdoctor" 
+                 Grid.Row="9" Grid.Column="3" Style="{StaticResource pointBox}"/>
+
+
+                <StackPanel Grid.Column=" 2" Grid.Row="10" Orientation="Horizontal" Grid.ColumnSpan="2">
+
+                    <Button x:Name="btnSavePatient"   Content="SAVE" 
+                            Cursor="Hand" 
+                            Margin="0 30 0 0"
+                            Click="btnSavePatient_Click"
+                    Style="{StaticResource actionButton}">
+                    </Button>
+
+                    <Button x:Name="btnUpdatePatient"   Content="UPDATE" 
+                            Cursor="Hand" 
+                            Margin="30 30 0 0"
+                            Click="btnpatientupdate_Click"
+                    Style="{StaticResource actionButton}">
+                    </Button>
+
+                    <Button x:Name="btnDeletePatient"   Content="DELETE" 
+                            Cursor="Hand" 
+                            Margin="30 30 0 0"                
+                           Click="btnDeletePatient_Click" 
+                    Style="{StaticResource actionButton}" >
+
+                    </Button>
+
+                </StackPanel>
+
+                <ListView
+            x:Name="lstvpatient"
+            SelectionChanged="lstvpatient_SelectionChanged"  
+            Grid.Row="12"
+            Grid.ColumnSpan="5"
+            Margin="12"
+            BorderThickness="2"
+            BorderBrush="black"
+            ItemsSource="{Binding patients}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="75"
+                                    Header="Edit">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button
+                                    x:Name="patientedit"
+                                    
+                                    Content="Edit"
+                                    Click="patientedit_Click"
+                                    CommandParameter="{Binding}"
+                                    Style="{StaticResource actionButton}">
+
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+
+                            <GridViewColumn Header="ID"
+                                    Width="50"
+                                    DisplayMemberBinding="{Binding PatientId}"/>
+                            <GridViewColumn Header="Registration Date"
+                                    Width="125"
+                                    DisplayMemberBinding="{Binding PatientRegistrationDate, StringFormat={}{0:MM/dd/yyyy}}"/>
+                            <GridViewColumn Header="First Name"
+                                    Width="125"
+                                    DisplayMemberBinding="{Binding PatientFirstName}"/>
+                            <GridViewColumn Header="Last Name"
+                                    Width="125"
+                                    DisplayMemberBinding="{Binding PatientLastName}"/>
+                            <GridViewColumn Header="Gender"
+                                    Width="75"
+                                    DisplayMemberBinding="{Binding PatientGender}"/>
+                            <GridViewColumn Header="Occupation"
+                                    Width="125"
+                                    DisplayMemberBinding="{Binding PatientOccupation}"/>
+                            <GridViewColumn Header="Date of Birth"
+                                    Width="125"
+                                    DisplayMemberBinding="{Binding PatientBirthDate,StringFormat={}{0:MM/dd/yyyy}}"/>
+                            <GridViewColumn Header="Age"
+                                    Width="50"
+                                    DisplayMemberBinding="{Binding PatientAge}"/>
+                            <GridViewColumn Header="Blood Group"
+                                    Width="50"
+                                    DisplayMemberBinding="{Binding PatientBloodGroup}"/>
+                            <GridViewColumn Header="Marital State"
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding PatientMaritalState}"/>
+                            <GridViewColumn Header="Address"
+                                    Width="150"
+                                    DisplayMemberBinding="{Binding PatientAddress}"/>
+                            <GridViewColumn Header="City"
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding PatientCity}"/>
+
+                            <GridViewColumn Header="Contact Number" 
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding PatientContactNumber}"/>
+                            <GridViewColumn Header="Department" 
+                                    Width="120"
+                                    DisplayMemberBinding="{Binding PatientDepartment}"/>
+                            <GridViewColumn Header="Doctor Name" 
+                                    Width="110"
+                                    DisplayMemberBinding="{Binding PatientDoctorName}"/>
+
+
+
+
+
+                        </GridView>
+                    </ListView.View>
+
+                </ListView>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Patient_Registration_System</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\01.jpeg" />
+    <None Remove="Images\02.jpeg" />
+    <None Remove="Images\03_01.jpeg" />
+    <None Remove="Images\04.jpeg" />
+    <None Remove="Images\05.jpeg" />
+    <None Remove="Images\06.jpeg" />
+    <None Remove="Images\08_01.jpeg" />
+    <None Remove="Images\09.jpeg" />
+    <None Remove="Images\Doctor-with-Child.jpg" />
+    <None Remove="Images\image1.jpg" />
+    <None Remove="Images\image11.jpeg" />
+    <None Remove="Images\image12.jpg" />
+    <None Remove="Images\image13.jpg" />
+    <None Remove="Images\image14.jpeg" />
+    <None Remove="Images\image2.jpg" />
+    <None Remove="Images\image3.jpg" />
+    <None Remove="View\HomeWindow.xaml~RF66e2499.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\01.jpeg" />
+    <Resource Include="Images\02.jpeg" />
+    <Resource Include="Images\03_01.jpeg" />
+    <Resource Include="Images\04.jpeg" />
+    <Resource Include="Images\05.jpeg" />
+    <Resource Include="Images\06.jpeg" />
+    <Resource Include="Images\08_01.jpeg" />
+    <Resource Include="Images\09.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Doctor-with-Child.jpg" />
+    <Resource Include="Images\image1.jpg" />
+    <Resource Include="Images\image11.jpeg" />
+    <Resource Include="Images\image12.jpg" />
+    <Resource Include="Images\image13.jpg" />
+    <Resource Include="Images\image14.jpeg" />
+    <Resource Include="Images\image2.jpg" />
+    <Resource Include="Images\image3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+  </ItemGroup>
+
+</Project>
